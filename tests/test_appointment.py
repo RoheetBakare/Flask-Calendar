@@ -9,7 +9,7 @@ from flask import session
 from fbone.extensions import db
 from fbone.appointment.models import Appointment
 
-from fbone.appointment.views import (get_utc_seconds,
+    `from fbone.appointment.views import (get_utc_seconds,
                                      get_local_minutes, appointment_ok)
 
 from tests import TestCase
@@ -45,7 +45,7 @@ class TestAppointment(TestCase):
                     end_time=end_time,
                     timezone=self.timezone,
                     message=self.message)
-
+# this function is defined here to book appointment as an instance 
     def init_some_appointments(self):
         for start, end in self.appointment_times:
             start_time = get_utc_seconds(self.today, start, self.timezone)
@@ -55,7 +55,7 @@ class TestAppointment(TestCase):
             db.session.add(appointment)
 
         db.session.commit()
-
+#this function is for testing all the appointments 
     def test_all_appointments(self):
         resp = self.client.get('/appointment/')
         self.assertEqual(resp.mimetype, 'application/json')
