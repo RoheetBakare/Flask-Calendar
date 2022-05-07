@@ -17,7 +17,7 @@ class TestFrontend(TestCase):
         self._test_get_request('/signup', 'frontend/signup.html')
 
         data = {
-            'email': 'new_user@example.com',
+            'email': 'test.rb@gmail.com',
             'password': '123456',
             'name': 'new_user',
             'agree': True,
