@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+#Make sure we download this libraries  and import them
+# If not imported use pip install "Name of the library"
 from fbone.user import User
 from fbone.extensions import mail
 

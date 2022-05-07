@@ -9,7 +9,7 @@ from flask import session
 from fbone.extensions import db
 from fbone.appointment.models import Appointment
 
-    `from fbone.appointment.views import (get_utc_seconds,
+    from fbone.appointment.views import (get_utc_seconds,
                                      get_local_minutes, appointment_ok)
 
 from tests import TestCase
