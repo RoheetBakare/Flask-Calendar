@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-
+#import all the neccssary files required if not downloaded use pip install "name of the file"
+# We need to setup a local envoironment before running the code 
 from datetime import date
 import time
 
