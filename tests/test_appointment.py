@@ -11,6 +11,7 @@ from fbone.appointment.models import Appointment
 
     from fbone.appointment.views import (get_utc_seconds,
                                      get_local_minutes, appointment_ok)
+                                     
 
 from tests import TestCase
 
@@ -70,7 +71,8 @@ class TestAppointment(TestCase):
         self.assertEqual(resp.status_code, 200)
         self.assertEqual(resp.json['timezone'], 0.0)
         self.assertEqual(resp.json['date'], date)
-
+#Testing appointments for all timezones 
+    
     def test_all_appointments_with_timezone(self):
         resp = self.client.get('/appointment/?timezone=%s' % self.timezone)
         self.assertEqual(resp.mimetype, 'application/json')
